@@ -91,7 +91,7 @@
           if (response && !response.error) {
             console.log("photo 1", response.data[0].source);
             document.getElementById("photo1").innerHTML = 
-              '<img source="' + response.data[0].source + '">';
+              '<img src="' + response.data[0].source + '">';
           } else {
             console.log("error", response);
           }
