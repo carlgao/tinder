@@ -90,6 +90,8 @@
         function (response) {
           if (response && !response.error) {
             console.log("photo 1", response.data[0].source);
+            document.getElementById("photo1").innerHTML = 
+              '<img source="' + response.data[0].source + '"/>'
           } else {
             console.log("error", response);
           }
@@ -109,6 +111,9 @@
 
 <div id="status">
 </div>
+
+<div id="photo1"></div>
+<div id="pho2o"></div>
 
 </body>
 </html>
