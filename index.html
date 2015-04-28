@@ -83,6 +83,16 @@
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
     });
+    
+    /* make the API call */
+    FB.api(
+        "/me/friends",
+        function (response) {
+          if (response && !response.error) {
+            console.log(response);
+          }
+        }
+    );
   }
 </script>
 
