@@ -100,7 +100,7 @@
   
   function displayNextPhoto() {
     document.getElementById("photo").innerHTML = 
-      '<img src="' + window.photos[window.photoIndex].source + '" width="600px" height="400px">';
+      '<img src="' + window.photos[window.photoIndex].source + '" style="max-width="100%" max-height="100%"">';
     window.photoIndex++;
   }
   
@@ -122,7 +122,7 @@
   the JavaScript SDK to present a graphical Login button that triggers
   the FB.login() function when clicked.
 -->
-<div id="content" style="width: 600px; margin: 20px auto">
+<div id="content" style="width: 600px; margin: 10px auto">
   <fb:login-button scope="public_profile,email,user_photos" onlogin="checkLoginState();">
   </fb:login-button>
   
@@ -131,7 +131,7 @@
   
   <button id="no-button" onclick="noClicked();" style="width:295px; height: 100px; background-color: red">NO</button>
   <button id="yes-button" onclick="yesClicked();" style="width:295px; height: 100px; background-color: green">YES</button>
-  <div id="photo" style="margin-top: 20px; text-align:center; padding-top:20px;"></div>
+  <div id="photo" style="margin-top: 20px; text-align:center; padding-top:20px; width:600px; height:450px;"></div>
 </div>
 </body>
 </html>
