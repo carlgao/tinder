@@ -119,6 +119,7 @@
   
   function doneClicked() {
     document.getElementById("content").innerHTML = '';
+    console.log(window.yesPhotos.length);
     for (var i = 0; i < window.yesPhotos.length; i++) {
       var x = document.createElement("img");
       x.setAttribute("src", window.yesPhotos[i]);
