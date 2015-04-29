@@ -90,13 +90,19 @@
         function (response) {
           if (response && !response.error) {
             console.log("photo 1", response.data[0].source);
-            document.getElementById("photo1").innerHTML = 
-              '<img src="' + response.data[0].source + '">';
+            window.photos = response.data;
+            displayPhoto(0);
           } else {
             console.log("error", response);
           }
         }
     );
+  }
+  
+  function displayPhoto(i) {
+    document.getElementById("photo").innerHTML = 
+      '<img src="' + response.data[0].source + '">';
+      
   }
 </script>
 
@@ -112,8 +118,9 @@
 <div id="status">
 </div>
 
-<div id="photo1"></div>
-<div id="pho2o"></div>
+<div id="photo"></div>
+<button id="no-button">NO</button>
+<button id="yes-button">YES</button>
 
 </body>
 </html>
