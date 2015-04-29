@@ -89,7 +89,8 @@
           if (response && !response.error) {
             console.log("photo 1", response.data[0].source);
             window.photos = response.data;
-            displayPhoto(0);
+            window.photoIndex = 0;
+            displayNextPhoto();
           } else {
             console.log("error", response);
           }
@@ -97,19 +98,22 @@
     );
   }
   
-  function displayPhoto(i) {
+  function displayNextPhoto() {
     document.getElementById("photo").innerHTML = 
-      '<img src="' + window.photos[i].source + '" width="600px">';
+      '<img src="' + window.photos[window.photoIndex].source + '" width="600px">';
+    window.photoIndex++;
   }
   
   function noClicked() {
     document.getElementById("photo").innerHTML = 
       'NO!';
+    setTimeout(displayNextPhoto, 1000);
   }
   
   function yesClicked() {
     document.getElementById("photo").innerHTML = 
       'YES!';
+    setTimeout(displayNextPhoto, 1000);
   }
 </script>
 
