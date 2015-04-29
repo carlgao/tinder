@@ -102,7 +102,10 @@
   function displayPhoto(i) {
     document.getElementById("photo").innerHTML = 
       '<img src="' + window.photos[i].source + '">';
-      
+  }
+  
+  function noClicked() {
+    alert("no");
   }
 </script>
 
@@ -119,8 +122,8 @@
 </div>
 
 <div id="photo"></div>
-<button id="no-button">NO</button>
-<button id="yes-button">YES</button>
+<button id="no-button" onclick="noClicked();">NO</button>
+<button id="yes-button" onclick="yesClicked();">YES</button>
 
 </body>
 </html>
