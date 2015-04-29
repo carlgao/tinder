@@ -99,7 +99,7 @@
   
   function displayPhoto(i) {
     document.getElementById("photo").innerHTML = 
-      '<img src="' + window.photos[i].source + '" width="720px">';
+      '<img src="' + window.photos[i].source + '" width="600px">';
   }
   
   function noClicked() {
@@ -118,7 +118,7 @@
   the JavaScript SDK to present a graphical Login button that triggers
   the FB.login() function when clicked.
 -->
-<div id="content" style="width: 720px; margin: 20px auto">
+<div id="content" style="width: 600px; margin: 20px auto">
   <fb:login-button scope="public_profile,email,user_photos" onlogin="checkLoginState();">
   </fb:login-button>
   
@@ -126,8 +126,8 @@
   </div>
   
   <div id="photo" style="margin-top: 20px;"></div>
-  <button id="no-button" onclick="noClicked();" style="width:355px; height: 100px; background-color: crimson">NO</button>
-  <button id="yes-button" onclick="yesClicked();" style="width:355px; height: 100px; background-color: lightgreen">YES</button>
+  <button id="no-button" onclick="noClicked();" style="width:355px; height: 100px; background-color: red">NO</button>
+  <button id="yes-button" onclick="yesClicked();" style="width:355px; height: 100px; background-color: green">YES</button>
 </div>
 </body>
 </html>
