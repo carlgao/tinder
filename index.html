@@ -90,6 +90,7 @@
             console.log("photo 1", response.data[0].source);
             window.photos = response.data;
             window.photoIndex = 0;
+            window.yesPhotos = [];
             displayNextPhoto();
           } else {
             console.log("error", response);
@@ -115,6 +116,16 @@
       'YES!';
     setTimeout(displayNextPhoto, 1000);
   }
+  
+  function doneClicked() {
+    document.getElementById("content").innerHTML = '';
+    for (var i = 0; i < window.yesPhotos.length; i++) {
+      var x = document.createElement("img");
+      x.setAttribute("src", window.yesPhotos[i]);
+      x.setAttribute("width", "600px");
+      document.getElementById("content").appendChild(x);
+    }
+  }
 </script>
 
 <!--
@@ -133,9 +144,6 @@
   <button id="no-button" onclick="noClicked();" style="width:295px; height: 100px; background-color: red">NO</button>
   <button id="yes-button" onclick="yesClicked();" style="width:295px; height: 100px; background-color: green">YES</button>
   <div id="photo" style="margin-top: 20px; text-align:center; width:600px; height:400px;"></div>
-</div>
-<div id="list" style="float:right;">
-  asdf
 </div>
 </body>
 </html>
