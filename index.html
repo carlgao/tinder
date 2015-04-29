@@ -114,6 +114,7 @@
   function yesClicked() {
     document.getElementById("photo").innerHTML = 
       'YES!';
+    window.yesPhotos.push(window.photos[window.photoIndex].source);
     setTimeout(displayNextPhoto, 1000);
   }
   
