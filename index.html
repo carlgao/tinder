@@ -119,8 +119,10 @@
   the FB.login() function when clicked.
 -->
 <div id="content" style="width: 50%; margin: 20px auto">
-  <fb:login-button scope="public_profile,email,user_photos" onlogin="checkLoginState();" style="margin:0 auto">
-  </fb:login-button>
+  <div id="login" style="margin: 0 auto">
+    <fb:login-button scope="public_profile,email,user_photos" onlogin="checkLoginState();">
+    </fb:login-button>
+  </div>
   
   <div id="status">
   </div>
